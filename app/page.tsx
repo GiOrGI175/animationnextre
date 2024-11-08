@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import HorizontalScrollCarousel from './components/HorizontalScrollCarousel';
+import HorizontalScrollCarousel from '../components/HorizontalScrollCarousel';
 
 export default function Home() {
   return (
