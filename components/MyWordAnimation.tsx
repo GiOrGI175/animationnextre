@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 type paragraphProps = {
   paragrapg: string;
@@ -13,14 +13,11 @@ export default function MyWordAnimation({ paragrapg }: paragraphProps) {
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['center 0.9', 'start start'],
+    //     offset: ['center 0.6', 'start 0'],
     // offset: ['center center', 'start 0.25'],
   });
 
   const words = paragrapg.split(' ');
-
-  useEffect(() => {
-    scrollYProgress.on('change', (e) => console.log(e));
-  }, []);
 
   return (
     <p
