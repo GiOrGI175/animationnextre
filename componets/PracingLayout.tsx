@@ -18,7 +18,7 @@ export default function PracingLayout({
     <div>
       <p>header</p>
       {children}
-      <MyContentlayout />
+      {MyContentlayout && <MyContentlayout />}
       <p>footer</p>
     </div>
   );
